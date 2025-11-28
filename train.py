@@ -4,16 +4,17 @@ from ultralytics import YOLO
 #model = YOLO("yolo11n.yaml")
 
 # Load a pretrained YOLO model (recommended for training)
-model = YOLO("yolo11n.pt")
+model = YOLO("hm6m2p.onnx")
 
 # Train the model using the 'coco8.yaml' dataset for 3 epochs
-results = model.train(data="dataset.yaml", epochs=0)
+#results = model.train(data="dataset.yaml", epochs=10)
 
 # Evaluate the model's performance on the validation set
-results = model.val()
+#results = model.val()
 
 # Perform object detection on an image using the model
 #results = model("https://ultralytics.com/images/bus.jpg")
 
 # Export the model to ONNX format
 #success = model.export(format="onnx")
+model("/home/omahayomaso/Projects/FUN/PCB_DATASET/01_missing_hole_01.jpg")
