@@ -5,11 +5,12 @@ import cv2
 # Create a new YOLO model from scratch
 #model = YOLO("yolo11n.yaml")
 
-# Load a pretrained YOLO model (recommended for training)
-model = YOLO("hm6m2p.onnx")
-
-# Train the model using the 'coco8.yaml' dataset for 3 epochs
-#results = model.train(data="dataset.yaml", epochs=10)
+def make_image(path):
+	# Load a pretrained YOLO model (recommended for training)
+	model = YOLO("hm6m2p.onnx")
+	
+	# Train the model using the 'coco8.yaml' dataset for 3 epochs
+	#results = model.train(data="dataset.yaml", epochs=10)
 
 # Evaluate the model's performance on the validation set
 #results = model.val()
@@ -17,18 +18,14 @@ model = YOLO("hm6m2p.onnx")
 # Perform object detection on an image using the model
 #results = model("https://ultralytics.com/images/bus.jpg")
 
-path = "samples/01_missing_hole_01.jpg"
+#path = "samples/01_missing_hole_01.jpg"
 
 # Export the model to ONNX format
 #success = model.export(format="onnx")
-<<<<<<< Updated upstream
-model("samples/01_missing_hole_01.jpg")
-=======
-results = model.predict(path)
-image = cv2.imread(path)
-print()
-while True:
-	for r in results:
+	results = model.predict(path)
+	image = cv2.imread(path)
+	print()
+	for idx, r in enumerate(results):
 		annotator = Annotator(image)
 	
 		boxes = r.boxes
@@ -37,11 +34,10 @@ while True:
 			c = box.cls
 			annotator.box_label(b, model.names[int(c)])
 		img = annotator.result()
-		cv2.imshow('YOLO V8 Detection', cv2.resize(img, (960, 540)))
-	if cv2.waitKey(1) & 0xFF == ord(' '):
-		break
+		#cv2.imshow('YOLO V8 Detection', cv2.resize(img, (960, 540)))
+		cv2.imwrite('temp.jpg', img)
+	return len(results)
 		
-cv2.destroyAllWindows()
+#cv2.destroyAllWindows()
 		
 	#print(w.boxes)
->>>>>>> Stashed changes
