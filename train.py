@@ -17,4 +17,4 @@ model = YOLO("hm6m2p.onnx")
 
 # Export the model to ONNX format
 #success = model.export(format="onnx")
-model("/home/omahayomaso/Projects/FUN/PCB_DATASET/01_missing_hole_01.jpg")
+model("samples/01_missing_hole_01.jpg")
