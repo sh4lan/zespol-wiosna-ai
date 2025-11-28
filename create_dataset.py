@@ -45,7 +45,7 @@ to_v5_directories("/home/omahayomaso/Projects/FUN/PCB_DATASET/dataset/images/tra
                   "/home/omahayomaso/Projects/FUN/PCB_DATASET/dataset/images/val",
                   "/home/omahayomaso/Projects/FUN/PCB_DATASET/dataset/labels/train",
                   "/home/omahayomaso/Projects/FUN/PCB_DATASET/dataset/labels/val",
-                  "/home/omahayomaso/Projects/FUN/PCB_DATASET/dataset/"
+                  "/home/omahayomaso/Projects/FUN/PCB_DATASET/dataset/images/"
 )   
 
-#print("Validation images are : ",countForVal)
+print("Validation images are : ",countForVal)

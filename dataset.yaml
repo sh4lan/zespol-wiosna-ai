@@ -1,6 +1,6 @@
 # Content of dataset.yaml
 train: /home/omahayomaso/Projects/FUN/PCB_DATASET/dataset/images/train
-val: /home/omahayomaso/Projects/FUN//PCB_DATASET/dataset/images/val
+val: /home/omahayomaso/Projects/FUN/PCB_DATASET/dataset/images/val
 # Number of classes in the dataset
 nc: 6
 # Class names
