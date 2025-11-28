@@ -16,7 +16,7 @@ def select_files():
 
         window.read()
 
-# select_files() <- nie dziala rn na linuxie
+# select_files() # <- nie dziala rn na linuxie
 
 def browse_images(image_paths):
 
